@@ -7,7 +7,7 @@ describe: CZSC策略回放
 """
 import os
 os.environ['czsc_max_bi_num'] = '20'
-os.environ['czsc_research_cache'] = r"D:\CZSC投研数据"
+os.environ['czsc_research_cache'] = r"/home/rory/CZSC投研数据"
 os.environ['signals_module_name'] = 'czsc.signals'
 import inspect
 import streamlit as st

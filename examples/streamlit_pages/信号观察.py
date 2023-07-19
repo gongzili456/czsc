@@ -7,7 +7,7 @@ describe: 信号观察页面
 """
 import os
 os.environ['czsc_max_bi_num'] = '20'
-os.environ['czsc_research_cache'] = r"D:\CZSC投研数据"
+os.environ['czsc_research_cache'] = r"/home/rory/CZSC投研数据"
 import czsc
 import numpy as np
 import pandas as pd

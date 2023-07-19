@@ -4,19 +4,20 @@ author: zengbin93
 email: zeng_bin8888@163.com
 create_dt: 2021/6/25 18:52
 """
-import time
 import json
-import requests
+import time
+from datetime import datetime
+from functools import partial
+from typing import List
+
 import pandas as pd
+import requests
 import tushare as ts
 from deprecated import deprecated
-from datetime import datetime
-from typing import List
-from functools import partial
 from loguru import logger
 from tenacity import retry, stop_after_attempt, wait_random
-from czsc.objects import RawBar, Freq
 
+from czsc.objects import Freq, RawBar
 
 # 数据频度 ：支持分钟(min)/日(D)/周(W)/月(M)K线，其中1min表示1分钟（类推1/5/15/30/60分钟）。
 # 对于分钟数据有600积分用户可以试用（请求2次），正式权限请在QQ群私信群主或积分管理员。

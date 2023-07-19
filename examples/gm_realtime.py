@@ -29,10 +29,11 @@ from czsc.strategies import CzscStrategyExample2
 os.environ['strategy_id'] = '43b099b8-*****-11ed-99a6-988fe0675a5b'
 os.environ['account_id'] = '613019f5-****-11ed-bdad-00163e18a8b3'
 os.environ['max_sym_pos'] = '0.5'
-os.environ['path_gm_logs'] = 'C:/gm_logs'
+os.environ['path_gm_logs'] = '~/gm_logs'
 
 
 def init(context):
+    print('init')
     # 股票池配置
     symbols = [
         'SZSE.300014',
@@ -67,5 +68,6 @@ def init(context):
 
 
 if __name__ == '__main__':
+    print('main: ', __file__, os.path.basename(__file__))
     run(filename=os.path.basename(__file__), token=gm_token, mode=MODE_LIVE, strategy_id=os.environ['strategy_id'])
 
