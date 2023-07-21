@@ -69,5 +69,5 @@ def init(context):
 
 if __name__ == '__main__':
     print('main: ', __file__, os.path.basename(__file__))
-    run(filename=os.path.basename(__file__), token=gm_token, mode=MODE_LIVE, strategy_id=os.environ['strategy_id'])
+    run(filename=os.path.basename(__file__), token=gm_token, mode=MODE_LIVE, strategy_id=os.environ['strategy_id'], serv_addr='172.26.12.224:7001')
 
